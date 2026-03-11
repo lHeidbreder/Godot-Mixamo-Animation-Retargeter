@@ -166,7 +166,7 @@ static func get_selected_paths(fs_tree:Tree)->Array:
 
 static func get_filesystem_tree(plugin:EditorPlugin)->Tree:
     var dock = plugin.get_editor_interface().get_file_system_dock()
-    return find_node_by_class_path(dock, ['SplitContainer','Tree']) as Tree
+    return find_node_by_class_path(dock, ['VBoxContainer','SplitContainer','MarginContainer','Tree']) as Tree
 
 static func tree_get_selected_items(tree:Tree)->Array:
     var res = []
